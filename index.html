@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack的蝴蝶兰图鉴</title>
+    <style>
+        /* 这里是 CSS 样式，用来美化网页 */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f9f6f0; /* 温柔的奶白色背景 */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #7d5a5a; /* 优雅的复古花盆色 */
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: 1fr 3fr; /* 左边简介占1份，右边列表占3份 */
+            gap: 2rem;
+        }
+
+        /* 响应式设计：手机端变成单栏 */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .sidebar {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            height: fit-content;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px); /* 鼠标悬停时卡片微微浮起 */
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover; /* 保证图片不型变 */
+            background-color: #eee; /* 图片未加载时的占位色 */
+        }
+
+        .card-content {
+            padding: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin: 0 0 0.5rem 0;
+            color: #5c3d3d;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #e8ded2;
+            color: #7d5a5a;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>兰香雅筑</h1>
+        <p>欢迎来到我家的蝴蝶兰线上图鉴(Welcome to my online Phalaenopsis guide)</p>
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            <h3>关于这个网站</h3>
+            <p>这里记录了我亲手养护的每一盆蝴蝶兰。从抽梗、起蕾到绚烂绽放，每一刻都值得被留念。</p>
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 1rem 0;">
+            <h4>当前养护环境</h4>
+            <p style="font-size: 0.9rem; color: #666;">
+                📍 阳台朝向(Direction to sunlight)：北向(North)<br>
+                💧 如何浇水（How to water): 干透浇透（water after dry)<br>
+                ☀️ 光照情况(Lighting condition)：明亮散射光(Bright scattered light)
+            </p>
+        </div>
+
+        <div class="grid">
+            
+            <div class="card">
+                <img src="大辣椒.png" alt="蝴蝶兰品种1">
+                <div class="card-content">
+                    <span class="tag">花期：春季</span>
+                    <h3 class="card-title">大辣椒</h3>
+                    <p class="card-desc">经典的深红花色，花瓣厚实。今年开得格外喜庆，花朵直径足足有 10 厘米，非常霸气。</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="幻影.png" alt="蝴蝶兰品种2">
+                <div class="card-content">
+                    <span class="tag">花期：冬春</span>
+                    <h3 class="card-title">幻影</h3>
+                    <p class="card-desc">带有迷人的复古条纹，花心是深紫色的(With charming retro stripes, the center of the flower is deep purple)</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="big white.jpg" alt="蝴蝶兰品种3">
+                <div class="card-content">
+                    <span class="tag">花期：秋（fall)</span>
+                    <h3 class="card-title">V3大白</h3>
+                    <p class="card-desc">大花型，价格便宜，皮实好养，花心黄色，其余为纯白色，推荐新手养(Large-flowered type, inexpensive, hardy and easy to care for. The center of the flower is yellow, while the rest is pure white. Recommended for beginners to grow)</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
